@@ -1,0 +1,8 @@
+{
+  "name": "e2e-playwright-in-docker",
+  "version": "1.0.0",
+  "dependencies": {
+    "playwright": "^1.24.2",
+    "@playwright/test": "^1.24.2"
+  }
+}

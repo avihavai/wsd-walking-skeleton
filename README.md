@@ -80,3 +80,25 @@ we'll discuss these briefly in the course, where this walking skeleton is used.
 The walking skeleton also comes with a few default VSCode settings. These
 settings can be found in the `settings.json` file in the `.vscode` folder. By
 default, we assume that you have the VSCode Deno plugin.
+
+## E2E Tests with playwright
+
+The walking skeleton comes also with simple
+[Playwright](https://playwright.dev/) configuration that provides an easy
+approach for building end-to-end tests. Check out the folder `tests` within
+`e2e-playwright` to get started.
+
+To run E2E tests, launch the project using the following command:
+
+```
+docker-compose run --entrypoint=npx e2e-playwright playwright test && docker-compose rm -sf
+```
+
+Note! Once finished, this will also remove any changes to the database of your
+local project.
+
+What the e2e tests effectively do is that they start up a browser within the
+docker container and examine the application programmatically based on the
+tests.
+
+(This isn't yet discussed in the materials, but will be sooner or later!)

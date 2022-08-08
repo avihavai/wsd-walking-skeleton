@@ -32,3 +32,13 @@ services:
     command: -connectRetries=60 -baselineOnMigrate=true migrate
     env_file:
       - project.env
+
+  e2e-playwright:
+    entrypoint: "/bin/true" # Prevent startup on docker-compose up
+    build: e2e-playwright
+    image: e2e-playwright
+    network_mode: host
+    depends_on:
+      - app
+    volumes:
+      - ./e2e-playwright/tests:/e2e-playwright/tests
