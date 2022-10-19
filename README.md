@@ -2,7 +2,7 @@
 
 This is a walking skeleton -- a starting point for working on the course
 assignments -- for the free online Web Software Development course available at
-[https://wsd.cs.aalto.fi/](https://wsd.cs.aalto.fi/).
+[https://fitech101.aalto.fi/web-software-development/](https://fitech101.aalto.fi/web-software-development/).
 
 ## Contents
 
