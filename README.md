@@ -7,9 +7,11 @@ assignments -- for the free online Web Software Development course available at
 ## Contents
 
 The walking skeleton has a simple Deno application that starts on port `7777`.
-The application responds to queries with the message `Hello world!`. Launching
-the walking skeleton starts the Deno application, a PostgreSQL server, and a
-database migration process (Flyway).
+The application responds to queries with the message `Hello world!` and logging
+the contents of the database table `names` to the console.
+
+Launching the walking skeleton starts the Deno application, a PostgreSQL server,
+and a database migration process (Flyway).
 
 ## Starting and shutting down
 

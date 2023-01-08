@@ -24,7 +24,7 @@ services:
         - project.env
 
   flyway:
-    image: flyway/flyway:8.4.0-alpine
+    image: flyway/flyway:9.11.0-alpine
     depends_on:
       - database
     volumes:

@@ -1,7 +1,14 @@
-import { serve } from "https://deno.land/std@0.160.0/http/server.ts";
+import { serve } from "./deps.js";
+import { sql } from "./database.js";
+
+const logNames = async () => {
+  const result = await sql`SELECT * FROM names`;
+  console.log(result);
+};
 
 const handleRequest = (request) => {
   console.log(`Request to ${request.url}`);
+  logNames();
   return new Response("Hello world!");
 };
 
