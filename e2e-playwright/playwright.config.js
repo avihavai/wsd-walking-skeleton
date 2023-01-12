@@ -10,10 +10,9 @@ module.exports = {
   },
   projects: [
     {
-      name: "e2e-headless-chrome",
+      name: "e2e-headless-chromium",
       use: {
         browserName: "chromium",
-        channel: "chrome",
       },
     },
   ],
