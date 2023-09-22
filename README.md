@@ -18,11 +18,11 @@ and a database migration process (Flyway).
 The walking skeleton is used with Docker Compose.
 
 - To start the walking skeleton, open up the terminal in the folder that
-  contains the `docker-compose.yml` file and type `docker-compose up`.
+  contains the `docker-compose.yml` file and type `docker compose up`.
 - To stop the walking skeleton, press `ctrl+C` (or similar) in the same terminal
-  where you wrote the command `docker-compose up`. Another option is to open up
+  where you wrote the command `docker compose up`. Another option is to open up
   a new terminal and navigate to the folder that contains the
-  `docker-compose.yml` file, and then write `docker-compose stop`.
+  `docker-compose.yml` file, and then write `docker compose stop`.
 
 ## Watching for changes
 
@@ -58,7 +58,7 @@ migrations fail, however.
 If you end up altering the migration files (or the schema in the database), you
 can clean up the database (remove the existing database tables) by stopping the
 containers and the related volumes -- with the database data -- with the command
-`docker-compose down`. When you launch the walking skeleton again after this,
+`docker compose down`. When you launch the walking skeleton again after this,
 the database is newly created based on the migration files.
 
 ## Deno cache
@@ -93,7 +93,7 @@ approach for building end-to-end tests. Check out the folder `tests` within
 To run E2E tests, launch the project using the following command:
 
 ```
-docker-compose run --entrypoint=npx e2e-playwright playwright test && docker-compose rm -sf
+docker compose run --entrypoint=npx e2e-playwright playwright test && docker compose rm -sf
 ```
 
 Note! Once finished, this will also remove any changes to the database of your
